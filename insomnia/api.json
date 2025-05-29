@@ -1,0 +1,181 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1748479411110
+  modified: 1748479411110
+collection:
+  - url: http://localhost/api/register
+    name: register
+    meta:
+      id: req_3aed232558e245a182ca2f6156bfd9f7
+      created: 1748479690312
+      modified: 1748480084240
+      isPrivate: false
+      sortKey: -1748479690312
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "name": "Test User",
+          "email": "test@example.com",
+          "password": "yourpassword",
+          "password_confirmation": "yourpassword"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost/api/login
+    name: login
+    meta:
+      id: req_9486d532b63341d8bf11ef10a8d75d4a
+      created: 1748480151903
+      modified: 1748480221622
+      isPrivate: false
+      sortKey: -1748480151903
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "email": "test@example.com",
+          "password": "yourpassword"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost/api/analysis/date-range?start_date=2025-01-01&end_date=2025-01-03
+    name: Get Analyses by Date Range
+    meta:
+      id: req_a5845bbaa98c45d5b4274df0bdb02dab
+      created: 1748480375439
+      modified: 1748481199734
+      isPrivate: false
+      sortKey: -1748480375439
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: 1|kiH00ICghxAyHDH60ymTilZvBlTO22w8DULF5npEe6ed676f
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost/api/analysis/list
+    name: Get Complete Analysis List
+    meta:
+      id: req_3c55d45867be479eafbb0d6a19b8a191
+      created: 1748481266754
+      modified: 1748481289226
+      isPrivate: false
+      sortKey: -1748480263671
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: 1|kiH00ICghxAyHDH60ymTilZvBlTO22w8DULF5npEe6ed676f
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost/api/neo/1
+    name: Get NEO Details by ID
+    meta:
+      id: req_314a4004a5324fe5b63ac498babfe374
+      created: 1748481314236
+      modified: 1748481337166
+      isPrivate: false
+      sortKey: -1748480319555
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: 1|kiH00ICghxAyHDH60ymTilZvBlTO22w8DULF5npEe6ed676f
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost/api/analysis/query
+    name: Send Query
+    meta:
+      id: req_f6020861d6b548729549fed5a00d8726
+      created: 1748481858626
+      modified: 1748481973956
+      isPrivate: false
+      sortKey: -1748480347497
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "start_date": "2025-01-01",
+          "end_date": "2025-01-05"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: 1|kiH00ICghxAyHDH60ymTilZvBlTO22w8DULF5npEe6ed676f
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1748479427469
+    modified: 1748479427469
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1748479427429
+    modified: 1748479427429
+    isPrivate: false

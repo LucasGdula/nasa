@@ -1,0 +1,16 @@
+services:
+  web-server:
+    container_name: nasa
+    build: ./docker/www
+    volumes:
+      - './workdir/nasa/:/var/www/html:delegated'
+    ports:
+      - '80:80'
+  db-server:
+    container_name: db-nasa
+    build: ./docker/db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
+    ports:
+      - '3306:3306'
